@@ -19,11 +19,7 @@ class Driver {
   }
 
   passengers() {
-    return this.trips().filter(
-      function(trip) {
-        return trip.driverId === this.id;
-      }.bind(this)
-    );
+    return this.trips().each{trip => trip.passenger()}
   }
 }
 
