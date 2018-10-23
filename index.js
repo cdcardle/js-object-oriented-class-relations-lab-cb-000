@@ -14,12 +14,21 @@ class Driver {
 let passengerId = 0;
 
 class Passenger {
-  constructor(name, price, drier) {
+  constructor(name, price, driver) {
     this.id = ++passengerId;
     this.name = name;
     this.price = price;
     if (driver) {this.driverId = driver.id;}
 
     store.passengers.push(this);
+  }
+}
+
+let tripId = 0;
+
+class Trips {
+  constructor(driver, passenger) {
+    this.driverId = driver.id;
+    this.passengerId = passenger.id;
   }
 }
