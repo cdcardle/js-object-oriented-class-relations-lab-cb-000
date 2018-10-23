@@ -10,7 +10,13 @@ class Driver {
     store.drivers.push(this);
   }
 
-
+  passengers() {
+    return store.passengers.filter(
+      function(passenger) {
+        return passenger.driverId === this.id;
+      }.bind(this)
+    );
+  }
 }
 
 let passengerId = 0;
@@ -25,21 +31,21 @@ class Passenger {
     store.passengers.push(this);
   }
 
-  driver() {
-    return store.drivers.find(
-      function(driver) {
-        return driver.id === this.driverId;
-      }.bind(this)
-    )
-  }
-
-  trips() {
-    return store.trips.filter(
-      function(trip) {
-        return trip.driverId === this.id;
-      }.bind(this)
-    );
-  }
+  // driver() {
+  //   return store.drivers.find(
+  //     function(driver) {
+  //       return driver.id === this.driverId;
+  //     }.bind(this)
+  //   )
+  // }
+  //
+  // trips() {
+  //   return store.trips.filter(
+  //     function(trip) {
+  //       return trip.driverId === this.id;
+  //     }.bind(this)
+  //   );
+  // }
 }
 
 let tripId = 0;
