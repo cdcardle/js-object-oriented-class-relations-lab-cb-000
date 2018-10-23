@@ -18,9 +18,9 @@ class Driver {
     );
   }
 
-  // passengers() {
-  //   return this.trips().each{trip => trip.passenger;}
-  // }
+  passengers() {
+    return this.trips().map{trip => trip.passenger;}
+  }
 }
 
 let passengerId = 0;
