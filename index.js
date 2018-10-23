@@ -39,21 +39,21 @@ class Passenger {
     store.passengers.push(this);
   }
 
-  // driver() {
-  //   return store.drivers.find(
-  //     function(driver) {
-  //       return driver.id === this.driverId;
-  //     }.bind(this)
-  //   )
-  // }
-  //
-  // trips() {
-  //   return store.trips.filter(
-  //     function(trip) {
-  //       return trip.driverId === this.id;
-  //     }.bind(this)
-  //   );
-  // }
+  driver() {
+    return store.drivers.find(
+      function(driver) {
+        return driver.id === this.driverId;
+      }.bind(this)
+    )
+  }
+
+  trips() {
+    return this.passengers().map(
+      function(passenger) {
+        return passenger.trip();
+      }
+    );
+  }
 }
 
 let tripId = 0;
