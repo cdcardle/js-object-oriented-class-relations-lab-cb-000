@@ -47,12 +47,12 @@ class Passenger {
     );
   }
 
-  drivers() {
-    return store.drivers.find(
-      function(driver) {
-        return driver.id === this.driverId;
-      }.bind(this)
-    )
+  driverss() {
+    return this.trips().map(
+      function(trip) {
+        return trip.drivers();
+      }
+    );
   }
 }
 
