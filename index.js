@@ -19,7 +19,7 @@ class Driver {
   }
 
   passengers() {
-    return this.trips().each{trip => trip.passenger()}
+    return this.trips().each{trip => trip.passenger;}
   }
 }
 
