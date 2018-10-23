@@ -10,9 +10,11 @@ class Driver {
     store.drivers.push(this);
   }
 
-  passenger() {
+  passengers() {
     return store.passengers.filter(
-      function(passenger){return passenger.driverId === this.id;}.bind(this)
+      function(passenger){
+        return passenger.driverId === this.id;
+      }.bind(this)
     )
   }
 }
