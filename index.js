@@ -47,7 +47,7 @@ class Passenger {
     );
   }
 
-  driver() {
+  drivers() {
     return store.drivers.find(
       function(driver) {
         return driver.id === this.driverId;
