@@ -40,10 +40,10 @@ class Passenger {
   }
 
   trips() {
-    return this.passengers().map(
-      function(passenger) {
-        return passenger.trip();
-      }
+    return store.trips.filter(
+      function(trip) {
+        return trip.passengerId === this.id;
+      }.bind(this)
     );
   }
 }
