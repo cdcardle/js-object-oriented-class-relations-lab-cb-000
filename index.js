@@ -10,7 +10,7 @@ class Driver {
     store.drivers.push(this);
   }
 
-  
+
 }
 
 let passengerId = 0;
@@ -34,12 +34,12 @@ class Passenger {
   }
 
   trips() {
-        return store.trips.filter(
-            function(trip) {
-                return trip.driverId === this.id;
-            }.bind(this)
-        );
-    }
+    return store.trips.filter(
+      function(trip) {
+        return trip.driverId === this.id;
+      }.bind(this)
+    );
+  }
 }
 
 let tripId = 0;
