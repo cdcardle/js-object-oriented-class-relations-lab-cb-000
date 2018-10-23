@@ -28,7 +28,7 @@ let tripId = 0;
 
 class Trips {
   constructor(driver, passenger) {
-    this.driver = driver;
-    this.passenger = passenger;
+    this.driver() = driver;
+    this.passenger() = passenger;
   }
 }
