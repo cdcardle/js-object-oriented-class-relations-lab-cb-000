@@ -30,6 +30,22 @@ class Passenger {
 
     store.passengers.push(this);
   }
+
+  driver() {
+    return store.drivers.find(
+      function(driver) {
+        return driver.id === this.driverId;
+      }.bind(this)
+    )
+  }
+
+  trips() {
+        return store.trips.filter(
+            function(trip) {
+                return trip.driverId === this.id;
+            }.bind(this)
+        );
+    }
 }
 
 let tripId = 0;
@@ -47,6 +63,14 @@ class Trip {
     return store.drivers.find(
       function(driver) {
         return driver.id === this.driverId;
+      }.bind(this)
+    )
+  }
+
+  passenger() {
+    return store.passengers.find(
+      function(passenger) {
+        return passenger.id === this.passengerId;
       }.bind(this)
     )
   }
