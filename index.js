@@ -29,10 +29,10 @@ let tripId = 0;
 class Trips {
   constructor(driver, passenger) {
     this.id = ++tripId;
-
-    if (driver) {this.driverId = driver.id;}
-    if (passenger) {this.passengerId = passenger.id;}
-
-    store.trips.push(this);
+    // 
+    // if (driver) {this.driverId = driver.id;}
+    // if (passenger) {this.passengerId = passenger.id;}
+    // 
+    // store.trips.push(this);
   }
 }
