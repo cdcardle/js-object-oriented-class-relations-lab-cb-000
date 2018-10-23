@@ -26,7 +26,7 @@ class Passenger {
 
 let tripId = 0;
 
-class Trips {
+class Trip {
   constructor(driver, passenger) {
     this.id = ++tripId;
 
